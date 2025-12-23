@@ -296,31 +296,6 @@ We're **1st and 2nd year students** building the future of fair hiring.
 
 ---
 
-## 📁 Project Structure
-
-```
-fair-hiring-network/
-├── src/
-│   ├── components/          # React UI components
-│   │   ├── SkillVerifier/   # Skill analysis UI
-│   │   ├── BiasDetector/    # Bias dashboard
-│   │   └── MatchExplainer/  # Match breakdown UI
-│   ├── agents/              # AI Agent logic
-│   │   ├── skillVerifier.js
-│   │   ├── biasDetector.js
-│   │   └── matchExplainer.js
-│   ├── api/                 # Backend API routes
-│   ├── utils/               # Helper functions
-│   └── App.jsx              # Main application
-├── docs/                    # Documentation
-├── tests/                   # Test suites
-├── .env.example             # Environment template
-├── package.json
-└── README.md
-```
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
