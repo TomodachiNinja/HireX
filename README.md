@@ -1,165 +1,388 @@
-# 🚀 ZION — Future of Work Hackathon Entry
+# 🎯 Fair Hiring Network
 
-**One-liner:** An AI agent network that verifies developer skills from GitHub, detects hiring bias, and explains why candidates match jobs — all transparently, auditable, and developer-friendly. ⚡️
+<div align="center">
 
----
+![Fair Hiring Network Banner](https://img.shields.io/badge/Fair%20Hiring-Network-2563EB?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0iTTggMTRzMS41IDIgNCAyczQtMiA0LTIiLz48bGluZSB4MT0iOSIgeTE9IjkiIHgyPSI5LjAxIiB5Mj0iOSIvPjxsaW5lIHgxPSIxNSIgeTE9IjkiIHgyPSIxNS4wMSIgeTI9IjkiLz48L3N2Zz4=)
 
-## 🔥 TL;DR
-ZION replaces the hiring black box with a court of evidence. Developers prove skill with GitHub as the source of truth, AI explains *why* candidates match, and a bias detector calls out unfair filters — loud, proud, and transparent. 🍿
+**AI Agents for Verifiable Skills & Bias-Free Talent Discovery**
 
----
+[![Future of Work](https://img.shields.io/badge/Hackathon-Future%20of%20Work-F59E0B?style=flat-square)](https://hackathon-link.com)
+[![Team ZION](https://img.shields.io/badge/Team-ZION-10B981?style=flat-square)](https://github.com/team-zion)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=flat-square&logo=node.js)](https://nodejs.org/)
 
-## 🧠 The Problem (In Plain Words)
-- Great devs get rejected because screening is a black box. ⚫️
-- Resumes compress truth; GitHub contains *work*. 🧾 → 🧠
-- Bias in hiring is invisible and unmeasurable. ⚖️
-- Candidates never know *why* they were rejected. 💬
+[Demo](#-live-demo) • [Features](#-features) • [Architecture](#-architecture) • [Installation](#-installation) • [Roadmap](#-roadmap) • [Team](#-team)
 
-ZION fixes that.
-
----
-
-## 🎯 System Flow (Super Short)
-1. Dev enters `github_username` → Skill Verifier analyzes public repos.
-2. Verifier builds a **Skill Profile** (commits, PRs, tests, architecture signals).
-3. Bias Detector evaluates pipeline + job filters → fairness score & fixes.
-4. Match Explainer gives human-grade explanations + proof links.
-5. Employer sees verified, explained candidate cards with audit trail.
+</div>
 
 ---
 
-## 🧰 Tech Stack
-- **Frontend:** React + Tailwind CSS
-- **Backend:** Node.js / Python FastAPI (microservices)
-- **LLMs:** Claude API + OpenAI API for skill analysis & transparent explanations
-- **Data:** GitHub API (repo analysis), static analysis tools, dependency graphs
-- **DB:** MongoDB or Firebase
-- **Optional:** IPFS / blockchain for immutable audit ledger
+## 🚨 The Problem
+
+Talented developers are being overlooked by biased, opaque AI screening systems.
+
+| The Reality | Impact |
+|-------------|--------|
+| **75%** of resumes are rejected by AI before a human ever sees them | Qualified candidates never get a chance |
+| **88%** of qualified candidates are filtered out unfairly | Skills-job mismatch due to keyword matching |
+| **0%** transparency in why candidates are rejected | No feedback, no improvement path |
+
+Traditional hiring AI systems are **black boxes** that:
+- Rely on resume keywords instead of real skills
+- Hide systemic bias in their matching patterns
+- Provide zero explanation for rejections
+- Cannot verify actual coding ability
 
 ---
 
-## ✨ Killer Features
-- **Skill Verifier:** Maps repo signals to skill buckets (Frontend, Backend, DevOps, ML).
-- **Bias Detector:** Quantifies bias per job posting and pipeline stage; suggests mitigations.
-- **Match Explainer:** LLM-generated rationale with direct links to commits, PRs, and lines of code.
-- **Transparency Ledger:** Immutable audit logs of decisions and scores.
-- **Candidate Portal:** Candidates view exactly which artifacts affected their score.
-- **Employer Dashboard:** Filter by verified skills, fairness score, and explainability index.
+## 💡 Our Solution
 
----
+**Fair Hiring Network** is a multi-agent AI system that makes hiring **transparent, fair, and verifiable**.
 
-## 🧪 Example Outputs
-**Skill profile (short):**
+We built **3 AI Agents** that work together:
 
-```json
-{
-  "username": "alice-dev",
-  "skills": {"python": 0.92, "react": 0.78, "testing": 0.85},
-  "evidence": [
-    {"repo":"microservice-xyz","file":"auth.py","commit":"abc123","reason":"solid auth design, tests"},
-    {"repo":"ui-kit","file":"Button.jsx","commit":"def456","reason":"accessible, reusable"}
-  ],
-  "skill_score": 0.85
-}
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  🔍 SKILL       │     │  ⚖️ BIAS        │     │  🎯 MATCH       │
+│  VERIFIER       │────▶│  DETECTOR       │────▶│  EXPLAINER      │
+│                 │     │                 │     │                 │
+│ Analyzes GitHub │     │ Monitors for    │     │ Shows WHY you   │
+│ to verify real  │     │ unfair patterns │     │ match (or don't)│
+│ coding skills   │     │ in matching     │     │                 │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
 ```
 
-**Bias report (short):**
+### How It Works
 
-```json
-{
-  "job_id":"backend-senior-01",
-  "bias_score":0.12,
-  "flags":["gendered_language_in_desc","school_filter_overweight"],
-  "recommendations":["remove_school_filter","display_skill_challenges"]
-}
+```
+Developer → GitHub Username → Skill Verifier → Verified Profile → Bias Check → Match Explainer → Fair, Transparent Result
 ```
 
-**Match explanation (short):**
-
-> Candidate matches because their recent microservice PRs implemented idempotent APIs with tests, they have extensive integration tests, and multiple approved reviews from senior contributors.
+1. **Developer enters GitHub username**
+2. **Skill Verifier Agent** analyzes repositories, code quality, and contribution patterns
+3. **Bias Detector Agent** monitors matching patterns for unfair discrimination
+4. **Match Explainer Agent** provides transparent scoring with detailed breakdown
+5. **Result**: Verified skills + Fair matching + Complete transparency
 
 ---
 
-## 🚀 Quickstart (Hackathon Mode)
-**Prereqs:** Node, Python, pip, MongoDB or Firebase, Git
+## ✨ Features
 
-1. Clone
+### 🔍 Skill Verification Agent
+- **GitHub Repository Analysis** - Scans all public repos
+- **Code Quality Scoring** - Uses LLM to evaluate code patterns
+- **Language Proficiency** - Calculates skill scores per language
+- **Contribution Patterns** - Analyzes commit history and collaboration
+
+### ⚖️ Bias Detection Agent
+- **Real-time Monitoring** - Tracks all matching decisions
+- **Statistical Analysis** - Detects demographic bias patterns
+- **Fairness Scoring** - System-wide fairness metrics
+- **Bias Alerts** - Immediate notification when bias detected
+
+### 🎯 Match Explainer Agent
+- **Transparent Scoring** - Shows exact match percentage
+- **Factor Breakdown** - Explains each scoring component
+- **Gap Analysis** - Identifies skill gaps clearly
+- **Improvement Tips** - Actionable feedback for candidates
+
+---
+
+## 🏗️ Architecture
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│                      FAIR HIRING NETWORK                       │
+├────────────────────────────────────────────────────────────────┤
+│                                                                │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
+│  │   Frontend   │  │   Backend    │  │   AI Layer   │         │
+│  │              │  │              │  │              │         │
+│  │  React +     │  │  Node.js /   │  │  Claude API  │         │
+│  │  Tailwind    │◀─▶│  FastAPI     │◀─▶│  / OpenAI    │         │
+│  │              │  │              │  │              │         │
+│  └──────────────┘  └──────────────┘  └──────────────┘         │
+│         │                 │                 │                  │
+│         └─────────────────┼─────────────────┘                  │
+│                           │                                    │
+│                    ┌──────▼──────┐                             │
+│                    │  Database   │                             │
+│                    │  MongoDB /  │                             │
+│                    │  Firebase   │                             │
+│                    └─────────────┘                             │
+│                                                                │
+├────────────────────────────────────────────────────────────────┤
+│                      EXTERNAL SERVICES                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │  GitHub API │  │  LLM APIs   │  │  Analytics  │            │
+│  └─────────────┘  └─────────────┘  └─────────────┘            │
+└────────────────────────────────────────────────────────────────┘
+```
+
+### Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 18, Tailwind CSS, Recharts |
+| **Backend** | Node.js / Python FastAPI |
+| **AI/LLM** | Claude API / OpenAI API |
+| **Database** | MongoDB / Firebase |
+| **APIs** | GitHub REST API, GitHub GraphQL |
+| **Authentication** | JWT, OAuth 2.0 |
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- GitHub API token
+- Claude API key or OpenAI API key
+
+### Quick Start
+
 ```bash
-git clone https://github.com/TeamZION/zion-hackathon.git
-cd zion-hackathon
-```
+# Clone the repository
+git clone https://github.com/team-zion/fair-hiring-network.git
+cd fair-hiring-network
 
-2. Create `.env` with keys (example):
-```
-GITHUB_TOKEN=ghp_xxx
-CLAUDE_API_KEY=claude_xxx
-OPENAI_API_KEY=sk-xxx
-MONGO_URI=mongodb://...
-```
-
-3. Run backend (FastAPI example):
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
-
-4. Run frontend:
-```bash
-cd frontend
+# Install dependencies
 npm install
-npm start
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys
+
+# Run development server
+npm run dev
 ```
 
-5. Try endpoints:
-```
-GET /api/verify/{github_username}
-GET /api/bias/{job_id}
-POST /api/explain { candidate: "username", job_id: "..." }
+### Environment Variables
+
+```env
+# GitHub
+GITHUB_TOKEN=your_github_token
+
+# AI Provider (choose one)
+ANTHROPIC_API_KEY=your_claude_api_key
+OPENAI_API_KEY=your_openai_api_key
+
+# Database
+MONGODB_URI=your_mongodb_connection_string
+
+# App
+PORT=3000
+NODE_ENV=development
 ```
 
 ---
 
-## 🧪 Demo Script (2 minutes)
-1. Enter `alice-dev` in the search box → watch the Verifier parse repos and show "Skill Stamps". 🔧
-2. Click "Explain match" → see an LLM-crafted reason with direct evidence links. 🔗
-3. Run bias check for a job → get flags and suggested quick fixes. 🚨
+## 📖 Usage
+
+### 1. Skill Verification
+
+```javascript
+// Enter a GitHub username to analyze
+const skillProfile = await skillVerifier.analyze('github-username');
+
+// Returns:
+{
+  username: 'developer123',
+  skills: [
+    { name: 'Python', score: 92, level: 'Expert', repos: 15 },
+    { name: 'React', score: 78, level: 'Advanced', repos: 8 },
+    // ...
+  ],
+  totalRepos: 42,
+  totalCommits: 1247
+}
+```
+
+### 2. Bias Detection
+
+```javascript
+// Check system fairness
+const fairnessReport = await biasDetector.analyze();
+
+// Returns:
+{
+  fairnessScore: 94,
+  alerts: [],
+  demographics: {
+    locationBias: 'None detected',
+    experienceBias: 'Low',
+    educationBias: 'None detected'
+  }
+}
+```
+
+### 3. Match Explanation
+
+```javascript
+// Get transparent match score
+const matchResult = await matchExplainer.match(candidateId, jobId);
+
+// Returns:
+{
+  matchScore: 85,
+  breakdown: [
+    { factor: 'Python Proficiency', match: 100, weight: 40 },
+    { factor: 'React Experience', match: 78, weight: 25 },
+    // ...
+  ],
+  recommendation: 'Strong Match - Recommend Interview'
+}
+```
 
 ---
 
-## 🛡️ Privacy, Ethics & Governance
-- Minimal profile data retained; candidate consent required before employers view results. ✅
-- Bias metric is multi-faceted (statistical + simulation) — not just single proxies. ⚖️
-- Roadmap: DAO-style governance for fairness rules and community-sourced fairness recipes. 🗳️
+## 🎬 Live Demo
+
+### Screenshots
+
+<div align="center">
+
+| Skill Verification | Bias Detection | Match Explainer |
+|:------------------:|:--------------:|:---------------:|
+| ![Skills](docs/screenshots/skills.png) | ![Bias](docs/screenshots/bias.png) | ![Match](docs/screenshots/match.png) |
+
+</div>
+
+### Demo Flow
+
+1. **Enter GitHub Username** → System fetches and analyzes repositories
+2. **View Skill Scores** → See verified proficiency levels
+3. **Check Bias Dashboard** → Ensure fair matching patterns
+4. **See Match Explanation** → Transparent breakdown of job fit
 
 ---
 
-## 🌙 Roadmap & Moonshots
-- **Phase 1 (MVP):** Skill Verifier, Match Explainer, Bias Detector — core hackathon build. ✅
-- **Phase 2:** DAO governance, provable skill badges on-chain. ⛓️
-- **Phase 3:** Integrations with ATS, real-time interview sandbox, multi-modal artifacts. 🛰️
+## 🗺️ Roadmap
+
+### Phase 1: MVP (Current)
+- [x] GitHub skill verification
+- [x] Bias detection dashboard
+- [x] Match explainer UI
+- [x] Basic API integration
+
+### Phase 2: Web3 Integration (Q2 2025)
+- [ ] Decentralized Identifiers (DIDs)
+- [ ] Verifiable Credentials (W3C standard)
+- [ ] Polygon ID compatibility
+- [ ] On-chain credential anchoring
+
+### Phase 3: Privacy Layer (Q3 2025)
+- [ ] Zero-Knowledge Proofs for verification
+- [ ] Selective disclosure
+- [ ] Quantum-safe cryptography preparation
+
+### Phase 4: Enterprise Scale (Q4 2025)
+- [ ] Enterprise governance dashboard
+- [ ] Compliance automation (EEOC, GDPR)
+- [ ] API licensing for HR platforms
+- [ ] Multi-tenant architecture
+
+---
+
+## 🎯 Judge-Specific Value
+
+| Judge Focus | What We Offer |
+|-------------|---------------|
+| **AI & Web3** | Multi-agent architecture, Skills as digital assets, DID roadmap, Channel partner model |
+| **Enterprise Governance** | Immutable audit trails, Multi-stakeholder visibility, Compliance-ready, Executive dashboards |
+| **Security & Cryptography** | Privacy-by-design, ZK-proofs roadmap, Quantum-safe planning, Secure API architecture |
+
+---
+
+## 👥 Team ZION
+
+We're **1st and 2nd year students** building the future of fair hiring.
+
+| Name | Role | Focus |
+|------|------|-------|
+| **Rahul** | COO | Operations & Strategy |
+| **Surya** | CEO | Vision & Business Development |
+| **Harsh** | CTO | Technical Architecture |
+| **Shantanu** | CPO | Product & User Experience |
+
+### Why Us?
+
+- 🎓 We'll face these biased hiring systems soon—we understand the problem personally
+- 🚀 We've built AI-powered EdTech solutions together (Sahayak AI, EduDash)
+- 💡 Our youth lets us think without legacy constraints
+- 🏗️ We're building infrastructure, not just another app
+
+---
+
+## 📁 Project Structure
+
+```
+fair-hiring-network/
+├── src/
+│   ├── components/          # React UI components
+│   │   ├── SkillVerifier/   # Skill analysis UI
+│   │   ├── BiasDetector/    # Bias dashboard
+│   │   └── MatchExplainer/  # Match breakdown UI
+│   ├── agents/              # AI Agent logic
+│   │   ├── skillVerifier.js
+│   │   ├── biasDetector.js
+│   │   └── matchExplainer.js
+│   ├── api/                 # Backend API routes
+│   ├── utils/               # Helper functions
+│   └── App.jsx              # Main application
+├── docs/                    # Documentation
+├── tests/                   # Test suites
+├── .env.example             # Environment template
+├── package.json
+└── README.md
+```
 
 ---
 
 ## 🤝 Contributing
-- PRs welcome. See `CONTRIBUTING.md`. Use feature branches: `feat/verifier-awesome` → PR → tag `hackathon/entry`.
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+```bash
+# Fork the repo
+# Create your feature branch
+git checkout -b feature/amazing-feature
+
+# Commit your changes
+git commit -m 'Add amazing feature'
+
+# Push to the branch
+git push origin feature/amazing-feature
+
+# Open a Pull Request
+```
 
 ---
 
-## 🧨 Hype Section (Because You Asked for CRAZY)
-> This README is not shy. ZION will roast bad hiring rules, give receipts for every opinion, and make hiring teams sweat (in a good way). Bring popcorn. 🍿
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🧾 License
-MIT © Team ZION
+## 🙏 Acknowledgments
+
+- Future of Work Hackathon organizers
+- GitHub API for developer data access
+- Anthropic & OpenAI for AI capabilities
+- The open-source community
 
 ---
 
-## 📬 Contact
-Demo link: https://zion-hackathon.demo (placeholder)
-Email: team@zion.example — subject: "I want ZION in my hiring stack"
+<div align="center">
 
----
+**Built with ❤️ by Team ZION**
 
-If you'd like, I can also add automated demo data, a one-click deploy script (Docker + Fly/Heroku), or generate LLM prompt templates for `ExplainMatch`, `BiasAudit`, and `SkillExtract`. Say the word and I’ll add it. ✨
+*Fair hiring starts with fair infrastructure.*
+
+[![GitHub](https://img.shields.io/badge/GitHub-Team%20ZION-181717?style=for-the-badge&logo=github)](https://github.com/team-zion)
+
+</div>
