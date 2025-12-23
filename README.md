@@ -239,27 +239,6 @@ const matchResult = await matchExplainer.match(candidateId, jobId);
 
 ---
 
-## 🎬 Live Demo
-
-### Screenshots
-
-<div align="center">
-
-| Skill Verification | Bias Detection | Match Explainer |
-|:------------------:|:--------------:|:---------------:|
-| ![Skills](docs/screenshots/skills.png) | ![Bias](docs/screenshots/bias.png) | ![Match](docs/screenshots/match.png) |
-
-</div>
-
-### Demo Flow
-
-1. **Enter GitHub Username** → System fetches and analyzes repositories
-2. **View Skill Scores** → See verified proficiency levels
-3. **Check Bias Dashboard** → Ensure fair matching patterns
-4. **See Match Explanation** → Transparent breakdown of job fit
-
----
-
 ## 🗺️ Roadmap
 
 ### Phase 1: MVP (Current)
@@ -301,12 +280,12 @@ const matchResult = await matchExplainer.match(candidateId, jobId);
 
 We're **1st and 2nd year students** building the future of fair hiring.
 
-| Name | Role | Focus |
-|------|------|-------|
-| **Rahul** | COO | Operations & Strategy |
-| **Surya** | CEO | Vision & Business Development |
-| **Harsh** | CTO | Technical Architecture |
-| **Shantanu** | CPO | Product & User Experience |
+|  Name  |     Role     |
+|-----------|-------------------|
+| **Rahul** | Research & Vision |
+| **Yatharth** | Frontend |
+| **Jlaj** | Backend |
+| **Vijay** | UI & UX |
 
 ### Why Us?
 
